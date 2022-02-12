@@ -34,12 +34,12 @@ class Image(models.Model):
     class Meta:
         db_table = 'images'
 
-class Allergy_drink(models.Model):
+class Allergytodrink(models.Model):
     allergy    = models.ForeignKey('Allergy',on_delete=models.CASCADE)
     drink      = models.ForeignKey('Drink',on_delete=models.CASCADE)
     
     class Meta:
-        db_table = 'allergy_drinks'
+        db_table = 'allergytodrinks'
         
 class Allergy(models.Model):
     name = models.CharField(max_length=45)
